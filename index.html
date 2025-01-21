@@ -256,6 +256,35 @@
         #gameSlide{
             margin: 20px 0 30px 0;
         }
+
+        .accordion-image{
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .accordion-header{
+            z-index: 4;
+            position: relative;
+        }
+
+        .accordion-button, .accordion-collapse{
+            background-color: #333 !important;
+            color: #ccc;
+            padding: 30px 10px 10px 10px;
+            margin-top: -15px;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        .accordion-button:not(.collapsed){
+            color: #ccc;
+            box-shadow: none;
+        }
+        
+        .accordion-button:after{
+            color: #ccc;
+            filter: invert(1);
+        }
     </style>
 
 </head>
@@ -387,14 +416,17 @@
                 </div>
             </div>
 
-            <a href="https://www.gofun8.com" target="_blank"><img style="margin: 10px 0;" src="img/banner.png"></a>
+            <a href="https://www.gofun8.com" target="_blank"><img style="margin: 10px 0; border-radius: 10px;" src="img/banner.png"></a>
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item my-3">
                     <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <a class="accordion-image" href="https://www.gofun8.com" target="_blank">
                             <img  src="img/limited01.png">
-                        </button>
+                        </a>
                     </h2>
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        More Info
+                    </button>
                     <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <p><span class="material-icons checkIcon">check_circle</span> <span class="buttonText">所有游戏</span></p>
@@ -406,10 +438,14 @@
                 </div>
                 <div class="accordion-item my-3">
                     <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            <img src="img/limited02.png">
-                        </button>
+                        <a class="accordion-image" href="https://www.gofun8.com" target="_blank">
+                            <img  src="img/limited02.png">
+                        </a>
                     </h2>
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        More Info
+                    </button>
+
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <p><span class="material-icons checkIcon">check_circle</span> <span class="buttonText">不限馆别</span></p>
@@ -421,10 +457,14 @@
                 </div>
                 <div class="accordion-item my-3">
                     <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            <img src="img/limited03.png">
-                        </button>
+                        <a class="accordion-image" href="https://www.gofun8.com" target="_blank">
+                            <img  src="img/limited03.png">
+                        </a>
                     </h2>
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        More Info
+                    </button>
+
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <p><span class="material-icons checkIcon">check_circle</span> <span class="buttonText">仅限真人</span></p>
